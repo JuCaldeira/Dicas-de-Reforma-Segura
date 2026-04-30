@@ -70,7 +70,8 @@ nav ul li a {
     margin-bottom: 20px;
 }
 
-.content span {
+.content span,
+.content .subtitle {
     color: #8e8e8e !important;
     font-size: 1.5rem;
     font-weight: 500 !important;
