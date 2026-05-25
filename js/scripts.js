@@ -1,21 +1,20 @@
 console.log("JS carregado!");
 
-const loadMoreButton = document.getElementById("load-more");
-const hiddenCards = document.querySelectorAll("#cards-container .card.hidden");
+const carregarBotaoLoad = document.getElementById("load-more");
+const cardsOcultos = document.querySelectorAll("#cards-container .card.hidden");
 
-let showingAll = false; // estado inicial: só os 4 primeiros
+let mostrarTodos = false; // estado inicial: só os 4 primeiros
 
-loadMoreButton.addEventListener("click", () => {
-  if (!showingAll) {
+carregarBotaoLoad.addEventListener("click", () => {
+  if (!mostrarTodos) {
     // Mostrar todos
-    hiddenCards.forEach(card => card.classList.remove("hidden"));
-    loadMoreButton.textContent = "Mostrar menos";
+    cardsOcultos.forEach((card) => card.classList.remove("hidden"));
+    carregarBotaoLoad.textContent = "Mostrar menos";
     showingAll = true;
   } else {
     // Esconder de novo
-    hiddenCards.forEach(card => card.classList.add("hidden"));
-    loadMoreButton.textContent = "Todas as publicações";
+    cardsOcultos.forEach((card) => card.classList.add("hidden"));
+    carregarBotaoLoad.textContent = "Todas as publicações";
     showingAll = false;
   }
 });
-

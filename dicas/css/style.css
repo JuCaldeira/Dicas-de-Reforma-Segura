@@ -1,0 +1,7 @@
+@import url("../../css/theme.css");
+
+body {
+    --theme: #238735;
+    --theme-deep: #176427;
+    --theme-soft: #e7f4e9;
+}
